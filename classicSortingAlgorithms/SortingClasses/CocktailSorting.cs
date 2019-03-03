@@ -2,6 +2,8 @@
 	using System.Collections.Generic;
 
 	class CocktailSorting<T> : Sort<T> {
+		public override string ClassName { get; set; } = "Cocktail";
+
 		public override T[] Sorting(T[] array) {
 			int left = 0;
 			int right = array.Length - 1;
@@ -31,6 +33,10 @@
 		}
 
 		public CocktailSorting(T[] array, IComparer<T> comparer) : base(array) {
+			Comparer = comparer;
+		}
+
+		public CocktailSorting(IComparer<T> comparer) : base() {
 			Comparer = comparer;
 		}
 	}

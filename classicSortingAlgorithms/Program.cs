@@ -29,22 +29,22 @@ namespace classicSortingAlgorithms {
 			}
 
 			List<Sort<int>> algorithms = new List<Sort<int>>() {
-				new BubbleSorting<int>(smallArray.ToArray(), comparer),
-				new InsertionSorting<int>(smallArray.ToArray(), comparer),
-				new SelectionSorting<int>(smallArray.ToArray(), comparer),
-				new DoubleSelectionSorting<int>(smallArray.ToArray(), comparer),
-				new CocktailSorting<int>(smallArray.ToArray(), comparer),
-				new QuickSorting<int>(smallArray.ToArray(), comparer),
-				new MergeSorting<int>(smallArray.ToArray(), comparer)
+				new BubbleSorting<int>(comparer),
+				new InsertionSorting<int>(comparer),
+				new SelectionSorting<int>(comparer),
+				new DoubleSelectionSorting<int>(comparer),
+				new CocktailSorting<int>(comparer),
+				new QuickSorting<int>(comparer),
+				new MergeSorting<int>(comparer)
 			};
 
 			Console.WriteLine("Sorting of a small array:\n");
 			foreach(var sort in algorithms) {
 				sort.Stopwatch.Start();
-				sort.Array = sort.Sorting(sort.Array);
+				sort.Array = sort.Sorting(smallArray.ToArray());
 				sort.Stopwatch.Stop();
 
-				Console.WriteLine(sort.GetType() + ": " + sort.Stopwatch.Elapsed);
+				Console.WriteLine(sort.ClassName + ": " + sort.Stopwatch.Elapsed);
 			}
 			Console.WriteLine("\n--------------------------------------------\n");
 
@@ -54,7 +54,7 @@ namespace classicSortingAlgorithms {
 				sort.Array = sort.Sorting(middleArray.ToArray());
 				sort.Stopwatch.Stop();
 
-				Console.WriteLine(sort.GetType() + ": " + sort.Stopwatch.Elapsed);
+				Console.WriteLine(sort.ClassName + ": " + sort.Stopwatch.Elapsed);
 			}
 			Console.WriteLine("\n--------------------------------------------\n");
 
@@ -64,7 +64,7 @@ namespace classicSortingAlgorithms {
 				sort.Array = sort.Sorting(largeArray.ToArray());
 				sort.Stopwatch.Stop();
 
-				Console.WriteLine(sort.GetType() + ": " + sort.Stopwatch.Elapsed);
+				Console.WriteLine(sort.ClassName + ": " + sort.Stopwatch.Elapsed);
 			}
 		}
 	}

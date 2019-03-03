@@ -2,6 +2,8 @@
 	using System.Collections.Generic;
 
 	class DoubleSelectionSorting<T> : Sort<T> {
+		public override string ClassName { get; set; } = "Double Selection";
+
 		public override T[] Sorting(T[] array) {
 			int lastUnsorted = array.Length - 1;
 
@@ -33,6 +35,10 @@
 		}
 
 		public DoubleSelectionSorting(T[] array, IComparer<T> comparer) : base(array) {
+			Comparer = comparer;
+		}
+
+		public DoubleSelectionSorting(IComparer<T> comparer) : base() {
 			Comparer = comparer;
 		}
 	}

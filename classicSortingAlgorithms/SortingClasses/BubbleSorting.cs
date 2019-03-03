@@ -3,6 +3,8 @@
 	using System.Diagnostics;
 
 	class BubbleSorting<T> : Sort<T> {
+		public override string ClassName { get; set; } = "Bubble";
+
 		public override T[] Sorting(T[] array) {
 			bool isSorted = false;
 			int lastUnsorted = array.Length - 1;
@@ -22,6 +24,10 @@
 		}
 
 		public BubbleSorting(T[] array, IComparer<T> comparer) : base(array) {
+			Comparer = comparer;
+		}
+
+		public BubbleSorting(IComparer<T> comparer) : base() {
 			Comparer = comparer;
 		}
 	}

@@ -4,6 +4,8 @@
 	using System.Linq;
 
 	class MergeSorting<T> : Sort<T> {
+		public override string ClassName { get; set; } = "Merge";
+
 		public override T[] Sorting(T[] array) {
 			return MergeSort(array);
 		}
@@ -34,6 +36,10 @@
 		}
 
 		public MergeSorting(T[] array, IComparer<T> comparer) : base(array) {
+			Comparer = comparer;
+		}
+
+		public MergeSorting(IComparer<T> comparer) : base() {
 			Comparer = comparer;
 		}
 	}

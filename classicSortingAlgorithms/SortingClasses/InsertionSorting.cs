@@ -3,6 +3,8 @@
 	using System.Diagnostics;
 
 	class InsertionSorting<T> : Sort<T> {
+		public override string ClassName { get; set; } = "Insertion";
+
 		public override T[] Sorting(T[] array) {
 			for (int i = 1; i < array.Length; i++) {
 				int j = i;
@@ -19,6 +21,10 @@
 		}
 
 		public InsertionSorting(T[] array, IComparer<T> comparer) : base(array) {
+			Comparer = comparer;
+		}
+
+		public InsertionSorting(IComparer<T> comparer) : base() {
 			Comparer = comparer;
 		}
 	}

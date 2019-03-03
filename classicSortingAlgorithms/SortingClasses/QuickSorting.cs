@@ -2,7 +2,9 @@
 	using System.Collections.Generic;
 	using System.Diagnostics;
 
-	class QuickSorting<T> : Sort<T>{
+	class QuickSorting<T> : Sort<T> {
+		public override string ClassName { get; set; } = "Quick";
+
 		public override T[] Sorting(T[] array) {
 			Sorting(array, 0, array.Length - 1);
 
@@ -13,6 +15,10 @@
 			int l = start;
 			int r = end;
 			int m = start + (end - start >> 1);
+
+			SwapIfGreater(array, l, m);
+			SwapIfGreater(array, l, r);
+			SwapIfGreater(array, m, r);
 
 			T pivot = array[m];
 
@@ -46,6 +52,10 @@
 		}
 
 		public QuickSorting(T[] array, IComparer<T> comparer) : base(array) {
+			Comparer = comparer;
+		}
+
+		public QuickSorting(IComparer<T> comparer) : base() {
 			Comparer = comparer;
 		}
 	}
