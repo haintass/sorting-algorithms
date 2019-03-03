@@ -1,0 +1,7 @@
+C:\Users\Haint\Desktop\classicSortingAlgorithms\classicSortingAlgorithms\bin\Debug\classicSortingAlgorithms.exe.config
+C:\Users\Haint\Desktop\classicSortingAlgorithms\classicSortingAlgorithms\bin\Debug\classicSortingAlgorithms.exe
+C:\Users\Haint\Desktop\classicSortingAlgorithms\classicSortingAlgorithms\bin\Debug\classicSortingAlgorithms.pdb
+C:\Users\Haint\Desktop\classicSortingAlgorithms\classicSortingAlgorithms\obj\Debug\classicSortingAlgorithms.csproj.CoreCompileInputs.cache
+C:\Users\Haint\Desktop\classicSortingAlgorithms\classicSortingAlgorithms\obj\Debug\classicSortingAlgorithms.exe
+C:\Users\Haint\Desktop\classicSortingAlgorithms\classicSortingAlgorithms\obj\Debug\classicSortingAlgorithms.pdb
+C:\Users\Haint\Desktop\classicSortingAlgorithms\classicSortingAlgorithms\obj\Debug\classicSortingAlgorithms.csprojAssemblyReference.cache
